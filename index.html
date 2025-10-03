@@ -1,126 +1,93 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ar">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>أيقونات التواصل الاجتماعي</title>
-  <style>
-    :root{
-      --icon-size: 42px;      /* غيّر الحجم هنا */
-      --accent: #111;         /* لون افتراضي */
-      --hover-scale: 1.12;
-      --gap: 12px;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>تابعوني على السوشال ميديا</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+  }
 
-    body{
-      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      min-height:100vh;
-      background: #f8fafc;
-      margin:0;
-    }
+  h2 {
+    color: #333;
+    margin-bottom: 20px;
+  }
 
-    .social-row{
-      display:flex;
-      gap: var(--gap);
-      direction: ltr; /* الأيقونات عادة تبقى لِـLTR */
-    }
+  .social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    padding: 12px 20px;
+    margin: 10px;
+    border-radius: 8px;
+    font-size: 18px;
+    width: 240px;
+    transition: transform 0.2s, opacity 0.2s;
+  }
 
-    .social-link{
-      width:var(--icon-size);
-      height:var(--icon-size);
-      display:inline-grid;
-      place-items:center;
-      border-radius:10px;
-      background: white;
-      box-shadow: 0 6px 14px rgba(15,23,42,0.06);
-      text-decoration:none;
-      transition: transform 160ms ease, box-shadow 160ms ease;
-      color:var(--accent);
-      overflow:visible;
-    }
+  .social-btn svg {
+    width: 28px;
+    height: 28px;
+    margin-right: 12px;
+    fill: white;
+  }
 
-    .social-link:focus,
-    .social-link:hover{
-      transform: scale(var(--hover-scale));
-      box-shadow: 0 10px 24px rgba(15,23,42,0.12);
-      outline: none;
-    }
+  .social-btn:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+  }
 
-    .social-link svg{
-      width: 60%;
-      height: 60%;
-      display:block;
-    }
+  /* ألوان المنصات */
+  .instagram {
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  }
 
-    /* ألوان خاصة لكل منصة (اختياري) */
-    .facebook { --accent: #1877F2; }
-    .tiktok   { --accent: #000000; }
-    .instagram{ --accent: radial-gradient(circle at 30% 10%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); }
+  .facebook {
+    background: #1877F2;
+  }
 
-    /* عند استخدام تدرج (instagram) سنستخدم صورة خلفية داخلية */
-    .instagram svg{ filter: none; }
-    .instagram .icon-wrap{
-      width:100%;
-      height:100%;
-      display:grid;
-      place-items:center;
-      border-radius:10px;
-      background: conic-gradient(from 200deg, #fdf497, #fd5949, #d6249f, #285AEB);
-      -webkit-mask: linear-gradient(#000 0 0);
-      mask: linear-gradient(#000 0 0);
-    }
-    .instagram .inner-bg{
-      width:78%;
-      height:78%;
-      border-radius: 999px;
-      background: white;
-      display:grid;
-      place-items:center;
-    }
-
-    /* لقراءة شاشة أفضل */
-    .sr-only{
-      position:absolute !important;
-      height:1px; width:1px;
-      overflow:hidden;
-      clip:rect(1px,1px,1px,1px);
-      white-space:nowrap;
-    }
-  </style>
+  .tiktok {
+    background: #000000;
+  }
+</style>
 </head>
 <body>
 
-  <nav class="social-row" aria-label="روابط التواصل الاجتماعي">
-    <!-- Facebook -->
-    <a class="social-link facebook" href="https://www.facebook.com/ghina._.kitchen" target="_blank" rel="noopener noreferrer" aria-label="فيسبوك">
-      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-        <path fill="currentColor" d="M22 12.07C22 6.49 17.52 2 11.94 2S1.88 6.49 1.88 12.07c0 4.99 3.66 9.13 8.44 9.9v-7.01H8.02V12.07h2.3V9.8c0-2.27 1.35-3.52 3.42-3.52.99 0 2.03.18 2.03.18v2.23h-1.14c-1.12 0-1.47.69-1.47 1.4v1.72h2.5l-.4 2.89h-2.1v7.01c4.78-.77 8.44-4.91 8.44-9.9z"/>
-      </svg>
-    </a>
+<h2>🌸 تابعوني على السوشال ميديا 🌸</h2>
 
-    <!-- TikTok -->
-    <a class="social-link tiktok" href="https://www.tiktok.com/ghina._.kitchen" target="_blank" rel="noopener noreferrer" aria-label="تيك توك">
-      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-        <path fill="currentColor" d="M12.5 3v8.02c.92.33 1.89.5 2.9.5V3h-2.9zM9.5 7.2v6.6c0 1.92 1.56 3.48 3.48 3.48 1.92 0 3.48-1.56 3.48-3.48V9.2h1.8v-2.0c0 0-1.1.1-1.9.1-1.4 0-2.8-.4-3.9-1V7.2h-2.0z"/>
-      </svg>
-    </a>
+<!-- Instagram -->
+<a class="social-btn instagram" href="https://instagram.com/ghina._.kitchen" target="_blank">
+  <svg viewBox="0 0 24 24">
+    <path d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 1.5A4.25 4.25 0 003.5 7.75v8.5A4.25 4.25 0 007.75 20.5h8.5A4.25 4.25 0 0020.5 16.25v-8.5A4.25 4.25 0 0016.25 3.5h-8.5zm8.5 2a1 1 0 110 2 1 1 0 010-2zm-4.25 1a5.25 5.25 0 110 10.5 5.25 5.25 0 010-10.5zm0 1.5a3.75 3.75 0 100 7.5 3.75 3.75 0 000-7.5z"/>
+  </svg>
+  Instagram
+</a>
 
-    <!-- Instagram (styled gradient) -->
-    <a class="social-link instagram" href="https://www.instagram.com/ghina._.kitchen" target="_blank" rel="noopener noreferrer" aria-label="إنستغرام">
-      <span class="icon-wrap" aria-hidden="true">
-        <span class="inner-bg">
-          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-            <path fill="#000" d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm5 6.2A4.8 4.8 0 1016.8 13 4.8 4.8 0 0012 8.2zm6.4-1.8a1.12 1.12 0 11-1.12-1.12A1.12 1.12 0 0118.4 6.4zM12 10.2a1.8 1.8 0 111.8-1.8A1.8 1.8 0 0112 10.2z"/>
-          </svg>
-        </span>
-      </span>
-    </a>
-  </nav>
+<!-- Facebook -->
+<a class="social-btn facebook" href="https://facebook.com/ghina._.kitchen" target="_blank">
+  <svg viewBox="0 0 24 24">
+    <path d="M22 12.07C22 6.49 17.52 2 11.94 2S1.88 6.49 1.88 12.07c0 4.99 3.66 9.13 8.44 9.9v-7.01H8.02V12.07h2.3V9.8c0-2.27 1.35-3.52 3.42-3.52.99 0 2.03.18 2.03.18v2.23h-1.14c-1.12 0-1.47.69-1.47 1.4v1.72h2.5l-.4 2.89h-2.1v7.01c4.78-.77 8.44-4.91 8.44-9.9z"/>
+  </svg>
+  Facebook
+</a>
 
-
+<!-- TikTok -->
+<a class="social-btn tiktok" href="https://tiktok.com/@ghina._.kitchen" target="_blank">
+  <svg viewBox="0 0 256 256">
+    <path fill="white" d="M128,0c0,0,0,0,0,0V136a64,64,0,1,1-64-64V92a92,92,0,1,0,92,92V56h40A64,64,0,0,1,128,0Z"/>
+  </svg>
+  TikTok
+</a>
 
 </body>
 </html>
