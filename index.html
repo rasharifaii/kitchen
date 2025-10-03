@@ -4,10 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>اختر البرنامج</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-T1+qZ5V5xYJb7pDbdW+M8uE9s+smMHGq1V9nZJZ5xg3+Oxh9l/Zx5eM5o+5a+kk5kH9f8J6Xo3Oj4OeZxQ9K5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <style>
     body {
         font-family: Arial, sans-serif;
-        background-color: #f9f9f9;
+        background: linear-gradient(to bottom right, #f9f9f9, #e0e0e0);
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -16,35 +17,52 @@
         margin: 0;
     }
     h1 {
-        margin-bottom: 30px;
+        margin-bottom: 40px;
         color: #333;
+        text-shadow: 1px 1px 2px #aaa;
     }
     .button {
-        display: block;
-        width: 250px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        width: 260px;
         padding: 15px;
-        margin: 10px 0;
+        margin: 12px 0;
         font-size: 18px;
-        text-align: center;
         color: white;
-        background-color: #007bff;
         border: none;
-        border-radius: 10px;
+        border-radius: 12px;
         text-decoration: none;
-        transition: background-color 0.3s;
+        transition: transform 0.2s, box-shadow 0.2s;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    .button i {
+        margin-right: 15px;
+        font-size: 26px;
     }
     .button:hover {
-        background-color: #0056b3;
+        transform: translateY(-3px);
+        box-shadow: 0 6px 10px rgba(0,0,0,0.15);
     }
+    .instagram { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);}
+    .tiktok { background: linear-gradient(45deg, #69C9D0, #EE1D52);}
+    .facebook { background-color: #3b5998;}
+    .whatsapp { background-color: #25D366;}
 </style>
 </head>
 <body>
 
-<h1>اختر البرنامج الذي تريد فتحه</h1>
+<h1>🌸 اختر البرنامج الذي تريد فتحه🌸</h1>
 
-<a class="button" href="https://instagram.com/ghina._.kitchen" target="_blank">instagram</a>
-<a class="button" href="https://tiktok.com/@ghina._.kitchen" target="_blank">tiktok</a>
-<a class="button" href="https://facebook.com/ghina._.kitchen" target="_blank">facebook</a>
+<a class="button instagram" href="https://instagram.com/ghina._.kitchen" target="_blank">
+    <i class="fab fa-instagram"></i> INSTAGRAM
+</a>
+<a class="button tiktok" href="https://tiktok.com/@ghina._.kitchen" target="_blank">
+    <i class="fab fa-tiktok"></i> TIKTOK
+</a>
+<a class="button facebook" href="https://facebook.com/ghina._.kitchen" target="_blank">
+    <i class="fab fa-facebook"></i> fACEBOOK
+</a>
 
 
 </body>
